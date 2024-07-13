@@ -7,7 +7,7 @@ search_btn.addEventListener('click', async () => {
     const search_value = search.value
     console.log(search_value,"search_value");
     if ( search_value === '' ) {
-        alert('Please enter a search term')
+        alert('Please enter a search term');
         return
     }else {
         // const key = 'RuJTeKhXAyF9G-9VlCJJv1NlEMuCgGCDgIS-2Brjv3E'
@@ -15,7 +15,7 @@ search_btn.addEventListener('click', async () => {
         const url = `https://api.unsplash.com/search/photos?page=1&query=${search_value}&client_id=${key}`
         let data = await fetch(url)
         data = await data.json()
-        console.log(data,"data")
+        console.log(data,"data");
         displayImages(data);
     }
 })
